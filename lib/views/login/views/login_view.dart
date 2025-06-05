@@ -1,10 +1,11 @@
-
+import 'dart:convert';
 
 import 'package:dialer_shubbhvivah/common/colors.dart';
 import 'package:dialer_shubbhvivah/common/text_styles.dart';
 import 'package:dialer_shubbhvivah/common/widgets.dart';
 import 'package:dialer_shubbhvivah/views/login/controllers/login_controller.dart';
 import 'package:dialer_shubbhvivah/views/main/views/main_view.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -17,6 +18,9 @@ class LoginView extends StatelessWidget {
   final controller = Get.put(LoginController());
   RxBool isLoading = false.obs;
   RxBool isObscure = true.obs;
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -166,7 +170,6 @@ class LoginView extends StatelessWidget {
                   isLoading.value = true;
                   await controller.login() ? Get.offAll(MainView()) : null;
                   isLoading.value = false;
-  
                 }
               },
               child: Container(

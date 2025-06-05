@@ -26,7 +26,10 @@ class MyApp extends StatelessWidget {
               ),
               // home: const IntroView(),
               // home:MainView(),
-              home: GetStorage().read('isLoggedIn')!=null && GetStorage().read('isLoggedIn') ? MainView(): LoginView());
+              home: GetStorage().read('isLoggedIn') != null &&
+                      GetStorage().read('isLoggedIn')
+                  ? MainView()
+                  : LoginView());
         });
   }
 }

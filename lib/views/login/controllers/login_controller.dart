@@ -18,7 +18,8 @@ class LoginController extends GetxController {
     try {
       var data = FormData.fromMap({
         'email_or_phone': emailController.text,
-        'password': passController.text
+        'password': passController.text,
+        'identity_matrix': 'check'
       });
 
       var dio = Dio();

@@ -17,7 +17,7 @@ class NewUsersView extends StatelessWidget {
                   for (int i = 0;
                       i < controller.newUsersModel.data.length;
                       i++) ...[
-                    NewUserContainer(
+                    PhoneCard(
                         onTap: () {
                           var url = Uri.parse(
                               "tel:${controller.newUsersModel.data[i].phone}");

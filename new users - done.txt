@@ -1,0 +1,7 @@
+new users - done
+
+dialer-api-client
+
+followup - Total, today,yesterday,tomorrow
+ number of positive client (data - member status value  - '0')
+           1 - negative, 2 - hot , 3 - holdon, 4- closed client,  
